@@ -1,0 +1,68 @@
+int latchPin = 6;            //connect 595 ’ pin 12
+int clockPin = 7;           //connect 595 ’s pin11 
+int dataPin = 5; 
+
+int latchPin2=12;
+int clockPin2=13;
+int dataPin2=11;// connect 595 ’s pin 14
+
+int arreglo[]={1,0};
+ 
+void imagen(){
+  
+  
+  
+}
+
+
+void setup() {
+  pinMode(latchPin, OUTPUT); 
+  pinMode(clockPin, OUTPUT);
+  pinMode(dataPin, OUTPUT); 
+  pinMode(latchPin2,OUTPUT);
+  pinMode(clockPin2,OUTPUT);
+  pinMode(dataPin2,OUTPUT);
+  
+
+  
+  
+}
+void loop()
+{
+ // for (int m = 0; m < 100; m++) {
+    
+     digitalWrite(latchPin, LOW); //Le decimos que vamos a escribir algo...
+  shiftOut(dataPin, clockPin, MSBFIRST, 98); //Lo escribimos
+  digitalWrite(latchPin, HIGH) ; //Y le indicamos que lo guarde
+  
+  
+  digitalWrite(latchPin2, LOW); //Le decimos que vamos a escribir algo...
+  shiftOut(dataPin2, clockPin2, MSBFIRST, 2); //Lo escribimos
+  digitalWrite(latchPin2, HIGH) ; //Y le indicamos que lo guarde
+  //}
+  
+  
+  /*digitalWrite(5, LOW)
+  digitalWrite(6,HIGH);
+  digitalWrite(7,LOW);
+    
+
+  digitalWrite(11,HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12,HIGH);
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+   
+    
+    for(int i=0;i<256;i++)
+    { 
+    digitalWrite(latchPin,LOW);
+    shiftOut(dataPin, clockPin, MSBFIRST, i); 
+    digitalWrite(latchPin,HIGH);
+    digitalWrite(latchPin2,LOW);
+    shiftOut(dataPin2, clockPin2, MSBFIRST, i); 
+    digitalWrite(latchPin2,HIGH);
+     
+    delay(1000);*/
+  
+}

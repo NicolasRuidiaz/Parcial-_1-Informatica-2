@@ -1,6 +1,6 @@
 const int SER=2;//Entrada de datos
-const int RCLK=4;//Reloj 1(salida)
-const int SRCLK=5;//Reloj 2(entrada)
+const int RCLK=4;//Reloj 2(salida)
+const int SRCLK=5;//Reloj 1(entrada)
 
 
 
@@ -24,23 +24,23 @@ void encender(){
              digitalWrite( SRCLK, 0);
  			 digitalWrite( SRCLK, 1);
  			digitalWrite( SRCLK, 0);
-           }
-  		/*	digitalWrite( RCLK, 0);
+           
+  			digitalWrite( RCLK, 0);
  	 		digitalWrite( RCLK, 1);
  			 digitalWrite( RCLK, 0);
-          	 }*/
+          	 }
            else if(bit==0){
               digitalWrite( SER, 0);
              
               digitalWrite( SRCLK, 0);
  			 digitalWrite( SRCLK, 1);
  			digitalWrite( SRCLK, 0);
-           }
+           
   		
-  		/*	digitalWrite( RCLK, 0);
+  			digitalWrite( RCLK, 0);
  	 		digitalWrite( RCLK, 1);
  			 digitalWrite( RCLK, 0);
-          	 }*/
+          	 }
   
 
            
@@ -49,15 +49,7 @@ void encender(){
              byte/=10;
            }
           
-    }
-  
-
-
-
-  		
-      digitalWrite( RCLK, 0);
- 	 		digitalWrite( RCLK, 1);
- 			 digitalWrite( RCLK, 0);     	
+    }   	
 
 
 }

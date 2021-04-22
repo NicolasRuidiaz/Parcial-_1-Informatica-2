@@ -1,0 +1,19 @@
+void apagar(){
+ int tamanio=8;
+
+  for (int i=0;i<tamanio;i++){//filas
+    for (int j=0;j<tamanio;j++){//columnas
+      digitalWrite( SER, 0);
+
+      digitalWrite( SRCLK, 0);
+      digitalWrite( SRCLK, 1);
+      digitalWrite( SRCLK, 0);
+
+      digitalWrite( RCLK, 0);
+      digitalWrite( RCLK, 1);
+      digitalWrite( RCLK, 0);
+
+    }
+  }
+  Serial.print("led-Off"); 
+}
